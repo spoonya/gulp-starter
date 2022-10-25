@@ -8,7 +8,7 @@ const config = require('../config');
 
 module.exports = function pug2html() {
   return gulp
-    .src('src/pages/*.pug')
+    .src('src/templates/pages/*.pug')
     .pipe(plumber())
     .pipe(pugLinter({ reporter: 'default' }))
     .pipe(pug())

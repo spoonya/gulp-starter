@@ -1,3 +1,6 @@
+mixin icon(className, name)
+  svg(class= className): use(xlink:href="assets/img/svg/sprite.svg#" + name)
+
 mixin crumbs(arrLinks)
   .crumbs
     .container

@@ -32,7 +32,7 @@ module.exports = function serve(cb) {
     )
   );
   gulp.watch('src/js/**/*.js', gulp.series(script, readyReload));
-  gulp.watch('src/pages/**/*.pug', gulp.series(pug2html, readyReload));
+  gulp.watch('src/templates/**/*.pug', gulp.series(pug2html, readyReload));
 
   gulp.watch('package.json', gulp.series(copyDependencies, readyReload));
 

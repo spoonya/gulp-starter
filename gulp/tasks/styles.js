@@ -23,7 +23,6 @@ module.exports = function styles() {
         ]
       })
     )
-    .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(
       autoprefixer({
@@ -45,6 +44,5 @@ module.exports = function styles() {
       )
     )
     .pipe(mediaGroup())
-    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('build/assets/css'));
 };
