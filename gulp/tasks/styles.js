@@ -10,7 +10,7 @@ const mediaGroup = require('gulp-group-css-media-queries');
 
 module.exports = function styles() {
   return gulp
-    .src('src/sass/*.scss')
+    .src('src/assets/sass/*.scss')
     .pipe(plumber())
     .pipe(
       gulpStylelint({

@@ -5,7 +5,7 @@ const rename = require('gulp-rename');
 
 module.exports = function svgSprite() {
   return gulp
-    .src('src/img/svg/sprite/*.svg')
+    .src('src/assets/img/svg/sprite/*.svg')
     .pipe(
       svgmin({
         js2svg: {
