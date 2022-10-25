@@ -5,6 +5,7 @@ const styles = require('./styles');
 const pug2html = require('./pug2html');
 const script = require('./script');
 const copyDependencies = require('./copyDependencies');
+const svgSprite = require('./svgSprite');
 
 const server = require('browser-sync').create();
 
@@ -33,6 +34,10 @@ module.exports = function serve(cb) {
   );
   gulp.watch('src/assets/js/**/*.js', gulp.series(script, readyReload));
   gulp.watch('src/templates/**/*.pug', gulp.series(pug2html, readyReload));
+  gulp.watch(
+    'src/assets/img/svg/sprite/*.svg',
+    gulp.series(svgSprite, readyReload)
+  );
 
   gulp.watch('package.json', gulp.series(copyDependencies, readyReload));
 
